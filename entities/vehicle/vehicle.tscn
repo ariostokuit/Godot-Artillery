@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://entities/vehicle/vehicle.gd" type="Script" id=1]
+[ext_resource path="res://scenes/common/assets/prototype/tanks/tank_model_1/tank_model_1_2_b.png" type="Texture" id=2]
+[ext_resource path="res://scenes/common/assets/prototype/tanks/tank_model_1/tank_model_1_3_w1.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.36, 8.074 )
+
+[node name="Vehicle" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Chassis" type="Sprite" parent="."]
+scale = Vector2( 0.118049, 0.118049 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="Barrel" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 2.73628, -4.96139 )
+scale = Vector2( 0.118049, 0.118049 )
+texture = ExtResource( 3 )
+offset = Vector2( 44.4408, 0.115261 )
+flip_h = true
+
+[node name="ShellSpawn" type="Position2D" parent="Barrel"]
+position = Vector2( 99.0345, 0.271969 )
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.143617 )
+shape = SubResource( 1 )
