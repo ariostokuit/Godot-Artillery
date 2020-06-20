@@ -14,3 +14,12 @@ tile_data = PoolIntArray( 786432, 2, 0, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0
 position = Vector2( 320.251, 363.097 )
 scale = Vector2( 5, 5 )
 speed = 200.0
+
+[node name="Placeholder" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Arrow keys or \"A and D\" to move.
+Up and Down or \"W and S\" to move turret."
+__meta__ = {
+"_edit_use_anchors_": false
+}
